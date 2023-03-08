@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #c56363;
+  color: blue;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgba(13, 43, 63, 0.753);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.img-about{
+	width: auto;
+	height: 350px;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>All information related on store avialable in this site.You can buy all study realated material here.</p>
+  <p>Here all payment are avialable and free Shipping after 200 ruppe shoping. 3 Days return policy available here.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img class="img-about" src="/images/rushikesh.jpeg" alt="Ruahikesh" style="width:100%">
+      <div class="container">
+        <h2>Rushikesh Katkar</h2>
+        <p class="title">Full Stack Dvelepor</p>
+        <p>He develop both the front-end and the server-side of the web and maintain their databases and servers.</p>
+        <p>katkarrushikesh2002@gmail.com</p>
+        <a href="contact.html"><input type="submit" value="Contact"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img class="img-about" src="/images/shubham.jpeg" alt="Shubham" style="width:100%">
+      <div class="container">
+        <h2>Shubham Ghadge</h2>
+        <p class="title">Full Stack Devlepor</p>
+        <p>He helps build and maintain both the front-end and the back-end of a website.</p>
+        <p>shubhamghadge784@gmail.com</p>
+        <a href="contact.html"><input type="submit" value="Contact"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img class="img-about" src="/images/nishant.jpeg" alt="Nishant" style="width:100%">
+      <div class="container">
+        <h2>Nishant Dhumal</h2>
+        <p class="title">Front-End Devlepor</p>
+        <p>He makes the front end of web by using htmal, css and java script.</p>
+        <p>nishantdhumal@gmail.com</p>
+        <a href="contact.html"><input type="submit" value="Contact"></a>
+      </div>
+    </div>
+  </div>
+    <div class="column" >
+      <div class="card" >
+        <img class="img-about" src="/images/aman.jpeg" alt="Aman" style="width:100%;">
+        <div class="container">
+          <h2>Aman Sutar</h2>
+          <p class="title">Designer</p>
+          <p>he help in design of website</p>
+          <p>amansutar2002@gmail.com</p>
+          <a href="contact.html"><input type="submit" value="Contact"></a>
+        </div>
+      </div>
+  </div>
+  
+  
+  
+</div>
+
+</body>
+</html>

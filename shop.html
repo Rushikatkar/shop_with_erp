@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* The grid: Four equal columns that floats next to each other */
+/* .column {
+  padding-left: auto ;
+  padding-right: auto;
+  width: 20%;
+  padding: 10px;
+} */
+body{
+background-color: rgb(202, 211, 152);
+
+}
+.flex-container{
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    margin-top: 7px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+img{
+  width:223.25px;
+  height: 296.69px;
+}
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+p {
+   text-align: center;
+}
+
+input[type="button"]{
+width: 100%;
+background-color: rgb(66, 66, 248);
+border: none;
+padding: 5px;
+border-radius: 5px;
+
+}
+
+input[type="submit"] {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgba(31, 16, 241, 0.753);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.logout{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgba(31, 16, 241, 0.753);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+  
+}
+</style>
+
+<body>
+    <!-- The grid: four columns -->
+    <a class= "logout"; href="index.html"><input  type="submit" value="log-out"></a>
+    <div class="flex-container">
+   <div class="row">
+    <div class="column">
+        <ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwhm93gTlWU3LwpebniMI6Ofy-tARth0pMRA&usqp=CAU" alt="Nature" onclick="myFunction(this);">
+            <p>One-side pages</p>
+            <a href="payment.html"><input type="submit" value="Purchase"></a>
+        </ul>
+    </div>
+    <div class="column">
+        <ul> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwhm93gTlWU3LwpebniMI6Ofy-tARth0pMRA&usqp=CAU" alt="Nature" onclick="myFunction(this);">
+            <p>Two-side pages</p>
+            <a href="payment.html"><input type="submit" value="Purchase"></a>
+        </ul>
+     </div>
+    <div class="column">
+         <ul>
+            <img src="/images/files.jpg" alt="Snow" onclick="myFunction(this);">
+             <p>Files</p>
+             <a href="payment.html"><input type="submit" value="Purchase"></a>
+        </ul>
+     </div>
+    <div class="column">
+         <ul>
+             <img src="/images/diary.jpg" alt="Mountains" onclick="myFunction(this);">
+            <p>Diaries</p>
+            <a href="payment.html"><input type="submit" value="Purchase"></a>
+        </ul>
+    </div>
+    <div class="column">
+        <ul>
+             <img src="/images/dressmaterial.jpg" alt="Lights" onclick="myFunction(this);">
+             <p>Uniform Material</p>
+             <a href="payment.html"><input type="submit" value="Purchase"></a>
+        </ul>
+    </div>
+  </div>
+</div>
+  <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <!-- <img id="expandedImg" style="width:100%">
+   -->
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
+</body>
+
+
+<script>
+    function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+
+</script>
+</html>
